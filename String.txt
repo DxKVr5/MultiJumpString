@@ -5,8 +5,42 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 if not checkcaller or checkcaller() then
 	UIS.JumpRequest:Connect(function()
-		if humanoid then
 			humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		end
 	end)
+
+	local head = character:WaitForChild("Head").CanCollide = false
+	local upperTorso = character:WaitForChild("UpperTorso")
+	local lowerTorso = character:WaitForChild("LowerTorso")
+	local leftupperArm = character:WaitForChild("LeftUpperArm")
+	local leftlowerArm = character:WaitForChild("LeftLowerArm")
+	local leftHand = character:WaitForChild("LeftHand")
+	local rightupperArm = character:WaitForChild("RightUpperArm")
+	local rightlowerArm = character:WaitForChild("RightLowerArm")
+	local rightHand = character:WaitForChild("RightHand")
+	local leftUpperLeg = character:WaitForChild("LeftUpperLeg")
+	local leftLowerLeg = character:WaitForChild("LeftLowerLeg")
+	local leftFoot = character:WaitForChild("LeftFoot")
+	local rightUpperLeg = character:WaitForChild("RightUpperLeg")
+	local rightLowerLeg = character:WaitForChild("RightLowerLeg")
+	local rightFoot = character:WaitForChild("RightFoot")
+	local rootPart = character:WaitForChild("HumanoidRootPart")
+	
+	head.CanCollide = false
+	upperTorso.CanCollide = false
+	lowerTorso.CanCollide = false
+	leftupperArm.CanCollide = false
+	leftlowerArm.CanCollide = false
+	leftHand.CanCollide = false
+	rightupperArm.CanCollide = false
+	rightlowerArm.CanCollide = false
+	rightHand.CanCollide = false
+	leftUpperLeg.CanCollide = false
+	leftLowerLeg.CanCollide = false
+	leftFoot.CanCollide = false
+	rightUpperLeg.CanCollide = false
+	rightLowerLeg.CanCollide = false
+	rightFoot.CanCollide = false
+	rootPart.CanCollide = false
+
 end
